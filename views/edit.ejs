@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit review</title>
+    <link rel="stylesheet" href="/styles/create.css">
+</head>
+<body>
+    <h1 class="page-title">Update your review</h1>
+    <div class="container">
+        <form class="edit" action="/edit/<%= book.id %>" method="post">
+            <h2>What's the name of the book?</h2>
+            <input type="text" name="name" placeholder="Name of the book" required class="create-input" value="<%= book.name %>">
+            <h2>What's the description of the book?</h2>
+            <input type="text" name="description" placeholder="Description of the book" required class="create-input" value="<%= book.description %>">
+            <h2>What's the rating you would give to this book?</h2>
+            <select name="rating" required>
+                <option value="">Select a rating...</option>
+                <% for (let i = 0; i <= 10; i++) { %>
+                    <option value="<%= i %>" <% if (i === book.rating) { %> selected <% } %>><%= i %></option>
+                <% } %>
+            </select>
+            <h2>When did you read this book?</h2>
+            <input type="date" id="datepicker" name="date_read" placeholder="Select a date" <% if(book.date_read){ %>value="<%= book.date_read.toISOString().slice(0, 10) %>" <% } %>>
+            <button type="submit" class="create-button">Update</button>
+        </form>
+    </div>
+</body>
+</html>

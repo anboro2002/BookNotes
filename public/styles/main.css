@@ -1,0 +1,141 @@
+body{
+    margin: 0 auto;
+    max-width: 40em;
+    padding: 5px ;
+    font-family: Georgia, serif;
+    font-size: 20px;
+    line-height: 30px;
+    background-color: #fff;
+    color: #000;
+}
+
+h1{
+    font-size: 2em;
+    line-height: 1em;
+}
+
+.container-sort {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin-top: 30px;
+    margin-bottom: 100px;
+}
+
+.create-button {
+    background-color: #007aff; /* Apple's default blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px; /* Padding around text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.create-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.create-button:link,
+.create-button:visited {
+    color: #fff; /* White text color */
+    text-decoration: none;
+}
+
+.sort {
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Set text color */
+    background-color: white; /* Set background color */
+    appearance: none; /* Remove default styling */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#000" d="M10 12.586l-6.293-6.293a1 1 0 00-1.414 1.414l7 7a1 1 0 001.414 0l7-7a1 1 0 00-1.414-1.414L10 12.586z"/></svg>'); /* Add custom dropdown arrow */
+    background-repeat: no-repeat; /* Prevent repeating of background image */
+    background-position: right 10px center; /* Position the background image */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove default focus outline */
+}
+
+
+.container{
+    margin: 50px 0 150px;
+}
+
+.cover-image{
+    margin-right: 40px;
+}
+
+img{
+    float: left;
+}
+
+h2{
+    color: #000;
+    text-decoration: underline;
+}
+
+small{
+    font-size: 0.8em;
+    color: #666;
+}
+
+.edit-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #4cd964;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: background-color 0.3s ease;
+  }
+  
+  .edit-button:hover {
+    background-color: #4CAE51;
+  }
+  
+  .edit-button:active {
+    background-color: #3ec852;
+  }
+
+  .edit-button a {
+    color: inherit;
+    text-decoration: none;
+  }
+
+  .buttons-container{
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    margin-top: 30px;
+    margin-bottom: 100px;
+  }
+
+  .delete-button {
+    background-color: #ff3b30; /* Red color used by Apple */
+    border: none;
+    color: #fff; /* White text color */
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    padding: 10px 20px; /* Adjust padding to your preference */
+    margin: 0;
+    transition: background-color 0.3s ease;
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  }
+
+  .delete-button:hover {
+    background-color: #d9534f; /* Darker red on hover */
+  }
+  

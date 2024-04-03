@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BookNotes</title>
+    <link rel="stylesheet" href="/styles/main.css">
+</head>
+<body>
+    <header>
+        <h1>
+            Books I've read
+        </h1>
+        <div>
+            <p>
+                Tiny summary but <strong>detailed notes for each.</strong>
+                <strong>This page will constantly update as I read more</strong>, so bookmark it if you want to check back in a few months.
+            </p>
+            <p>
+                Sorted with <strong>my top recommendations up top</strong>. Sort by title, newest, or best.
+            </p>
+            <p>
+                And please <strong>read this FAQ page about these notes</strong>, if you have any questions. You can also email me.
+            </p>
+        </div>
+    </header>
+    <hr>
+    <div class="container-sort">
+        <form action="/create" method="GET">
+            <button class="create-button">Create a New Book Review!</button>
+        </form>
+        <form action="/" method="GET">
+            <select name="sortBy" class="sort" required onchange="this.form.submit()">
+                <option value="">Sort reviews...</option>
+                <option value="1">Sort by review asc</option>
+                <option value="2">Sort by review desc</option>
+                <option value="3">Sort by date asc</option>
+                <option value="4">Sort by date desc</option>
+            </select>
+        </form>
+    </div>
+    <% for( let book of books){ %>
+        <div class="container">
+            <img src="<%= book.image.url %>" class="cover-image" width="125" height="187">
+            <h2><%= book.name %></h2>
+            <small>
+                <% if(book.date_read){ %>
+                Date read: <%= book.date_read.toISOString().slice(0, 10) %>.
+                <% } else { %>
+                Date read: Not specified.
+                <% } %>
+                My personal review: <%= book.rating %>/10
+                <br>
+                Date of added review - <%= book.date.toISOString().slice(0, 10) %>.
+            </small>
+            <p> <%= book.description %></p>
+            <div class="buttons-container">
+                <form action="/update/<%= book.id %>">
+                    <button class="edit-button">Edit</button>
+                </form>         
+                <form action="/delete/<%= book.id %>" method="post">
+                    <button class="delete-button">Delete</button>
+                </form>
+            </div>
+        </div>
+    <% } %>
+</body>
+</html>

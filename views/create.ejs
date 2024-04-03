@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Book Review</title>
+    <link rel="stylesheet" href="/styles/create.css">
+</head>
+<body>
+    <h1 class="page-title">Create your new review</h1>
+    <div class="container">
+        <form action="/new" method="POST" class="create-form">
+            <h2>What's the name of the book?</h2>
+            <input type="text" name="name" placeholder="Name of the book" required class="create-input">
+            <h2>What's the description of the book?</h2>
+            <input type="text" name="description" placeholder="Description of the book" required class="create-input">
+            <h2>ISBN code of the book:</h2>
+            <input type="text" name="isbn_code" placeholder="978-1961299122" required class="create-input">
+            <h2>What's the rating you would give to this book?</h2>
+            <select name="rating" required>
+                <option value="">Select a rating...</option>
+                <option value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select>
+            <h2>When did you read this book?</h2>
+            <input type="date" id="datepicker" name="date_read" placeholder="Select a date">
+            <button type="submit" class="create-button">Submit</button>
+        </form>
+    </div>
+ 
+</body>
+</html>

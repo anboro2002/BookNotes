@@ -1,0 +1,86 @@
+.page-title {
+    padding: 20px; /* Add padding to the top */
+    text-align: center; /* Center the text horizontally */
+    font-size: 45px;
+}
+
+.create-button {
+    background-color: #007aff; /* Apple's default blue color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 8px; /* Rounded corners */
+    padding: 12px 24px; /* Padding around text */
+    font-size: 16px; /* Font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    display: block;
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+    margin: 45px auto 0;
+}
+
+.create-button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+.create-button:link,
+.create-button:visited {
+    color: #fff; /* White text color */
+    text-decoration: none;
+}
+
+.create-input {
+    padding: 10px; /* Adjust padding as needed */
+    border: 1px solid #ccc; /* Add a border */
+    border-radius: 5px; /* Add rounded corners */
+    background-color: white; /* Set background color to white */
+    font-size: 16px; /* Adjust font size as needed */
+    color: #333; /* Set text color */
+    outline: none; /* Remove default focus outline */
+    transition: border-color 0.3s ease; /* Add a transition effect for the border */
+}
+
+/* Add hover effect */
+.create-input:hover {
+    border-color: #999; /* Change border color on hover */
+}
+
+/* Add focus effect */
+.create-input:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+/* Style select element */
+.create-input select {
+    width: 100%; /* Make select fill the width of its container */
+    padding: 10px; /* Add padding */
+    border: 1px solid #ccc; /* Add border */
+    border-radius: 5px; /* Add rounded corners */
+    font-size: 16px; /* Set font size */
+    color: #333; /* Set text color */
+    background-color: white; /* Set background color */
+    appearance: none; /* Remove default styling */
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path fill="#000" d="M10 12.586l-6.293-6.293a1 1 0 00-1.414 1.414l7 7a1 1 0 001.414 0l7-7a1 1 0 00-1.414-1.414L10 12.586z"/></svg>'); /* Add custom dropdown arrow */
+    background-repeat: no-repeat; /* Prevent repeating of background image */
+    background-position: right 10px center; /* Position the background image */
+    cursor: pointer; /* Change cursor to pointer */
+    outline: none; /* Remove default focus outline */
+}
+
+/* Hover effect for select */
+.create-input select:hover {
+    border-color: #999; /* Change border color on hover */
+}
+
+/* Focus effect for select */
+.create-input select:focus {
+    border-color: #007bff; /* Change border color on focus */
+}
+
+.container {
+    display: flex; /* Use flexbox for layout */
+    justify-content: center; /* Horizontally center items */
+    align-items: center; /* Vertically center items */
+    text-align: center;
+}
